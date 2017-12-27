@@ -232,7 +232,7 @@ class FrontControllerCore extends Controller
      *
      * @return bool
      */
-    public function viewAccess()
+    public function viewAccess($disable = false)
     {
         return true;
     }
@@ -886,7 +886,7 @@ class FrontControllerCore extends Controller
      *
      * @return bool
      */
-    public function setMedia()
+    public function setMedia($isNewTheme = false)
     {
         $this->registerStylesheet('theme-main', '/assets/css/theme.css', ['media' => 'all', 'priority' => 50]);
         $this->registerStylesheet('theme-custom', '/assets/css/custom.css', ['media' => 'all', 'priority' => 1000]);
